@@ -32,6 +32,7 @@ public class Appointment {
     @ManyToOne
     private Service service;
 
+    @Enumerated(EnumType.STRING)
     @Column
     private AppointmentStatus status;
 }
