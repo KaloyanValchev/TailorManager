@@ -1,6 +1,7 @@
-package com.kaloyan.tailorshop.model;
+package com.kaloyan.tailorshop.model.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -19,16 +20,17 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column
+    @Column(nullable = false)
     private String firstName;
 
-    @Column
+    @Column(nullable = false)
     private String lastName;
 
-    @Column
+    @Column(unique = true, nullable = false)
     private String phoneNumber;
 
     @Column
+    @Email
     private String email;
 
     @Column

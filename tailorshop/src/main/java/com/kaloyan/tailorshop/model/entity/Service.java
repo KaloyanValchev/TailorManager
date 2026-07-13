@@ -1,4 +1,4 @@
-package com.kaloyan.tailorshop.model;
+package com.kaloyan.tailorshop.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

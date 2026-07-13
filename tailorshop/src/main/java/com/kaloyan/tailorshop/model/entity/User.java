@@ -1,5 +1,6 @@
-package com.kaloyan.tailorshop.model;
+package com.kaloyan.tailorshop.model.entity;
 
+import com.kaloyan.tailorshop.model.enums.UserRoles;
 import lombok.*;
 import jakarta.persistence.*;
 import java.util.UUID;
@@ -25,6 +26,4 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private UserRoles role;
-
-
 }
